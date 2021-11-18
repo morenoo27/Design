@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+/*EDICION CODIGO DEL HEADER*/
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/*ORDENAMOS LOS ELEMENTOS EN EL ORDEN CORRECTO*/
+header>nav#menu-principal {
+    order: 0;
+}
+
+header>nav#buscador {
+    order: 1;
+}
+
+header>picture {
+    order: 2;
+}
+
+header>nav#compra {
+    order: 3;
+}
+
+/*ESTILADO DE ELEMENTOS*/
+
+/*hamburgesa*/
+header>nav#menu-principal>label>span {
+    font-size: 2rem;
+    /*para ponerlo mas grande*/
+    color: rgb(56, 53, 53);
+}
+
+header>nav#menu-principal>ul#menu {
+    display: none;
+}
+
+input#menu-hamburger {
+    display: none;
+}
+
+input#menu-hamburger:checked+ul#menu {
+    display: block;
+}
+
+/*menu*/
+header>nav#menu-principal>ul#menu>li {
+    list-style: none;
+}
+
+/*busqueda*/
+header>nav#buscador>ul>li {
+    list-style: none;
+    font-size: 1.25rem;
+
+}
+
+header>nav#buscador>ul>li>a {
+    color: rgb(56, 53, 53)
+}
+
+/*compra*/
+header>nav#compra>ul>li {
+    list-style: none;
+    font-size: 1.25rem;
+}
+
+header>nav#compra>ul>li>a {
+    color: rgb(56, 53, 53)
+}
+
+/*logo*/
+header>picture>img#logo {
+    max-width: 100px;
+}
+
+
+/*ESTRUCTURADO DE MAIN*/
+main{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+main>article.item{
+    flex: 1 1 35%;
+}
+
+.item:last-child{
+    margin-right: 53%;
+}
+
+/*estilado de items*/
+.item{
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    margin: 1rem;
+}
+
+.item>:last-child{
+    order: -1;
+}
+
+.item>a{
+    text-decoration: none;
+    color: rgb(56, 53, 53)
+}
+
+.item>a>picture>img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/*FOOTER*/
+
+footer{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/*MENU ADICIONAL*/
+footer>nav#menu-adicional{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+footer>nav#menu-adicional>ul{
+    width: 100%;
+    flex: 1 1 100%;
+}
+footer>nav#menu-adicional>ul>li{
+    list-style: none;
+    flex: 1 1 100%;
+    margin-left: 0.12rem;
+    border-bottom: 1px solid rgb(56, 53, 53);
+}
+
+footer>nav#menu-adicional>ul>li>a{
+    text-decoration: none;
+    color: rgb(56, 53, 53);
+    margin-bottom: 3rem;
+}
+
+/*ICONOS SOCIALES*/
+footer> nav#iconos-sociales>ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+footer> nav#iconos-sociales>ul>li{
+    list-style: none;
+    padding: 1rem;
+}
+
+footer> nav#iconos-sociales>ul>li>a{
+    color: #838383;
+    font-size: 1.5rem;
+}

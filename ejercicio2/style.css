@@ -1,0 +1,98 @@
+/*estilos de la letra de la pagina entera*/
+
+* {
+    font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+/*fondos*/
+
+header {
+    padding: 0.75rem 1rem;
+    background-color: #F76347;
+}
+
+.aside {
+    padding: 0.75rem 1rem;
+}
+
+.aside1 {
+    background-color: #F9D702;
+}
+
+main section {
+    background-color: #44BFFF;
+    text-align: justify;
+    flex: 1 1 100%;
+    padding: 0.75rem 1rem;
+}
+
+footer {
+    padding: 0.75rem 1rem;
+    background-color: #90EE90;
+}
+
+.aside2 {
+    background-color: #F969B4;
+}
+
+/*ESTILOS MOBILE FIRST*/
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+}
+
+@media all and (min-width: 500px) {
+
+    .aside1{color: white;}
+    
+    main{
+        flex-wrap: wrap;
+        flex-flow: column;
+    }
+
+    main section {
+        flex: 1 1 100%;
+    }
+
+    .aside{
+        flex: 1 1 25%;
+    }
+}
+
+/*VISTA ORDENADOR MAX PANTALLA*/
+
+/*
+
+
+.aside1 {
+    background-color: #F9D702;
+    order: -1;
+}
+
+main section {
+    background-color: #44BFFF;
+    text-align: left;
+    flex: 1 1 100%;
+    padding: 0.75rem 1rem;
+}
+
+.aside {
+    flex: 1 1 50%;
+    padding: 0.75rem 1rem;
+}
+
+
+
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+*/
