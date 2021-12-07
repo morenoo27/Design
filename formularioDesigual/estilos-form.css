@@ -1,0 +1,158 @@
+*{
+	box-sizing:border-box;
+}
+
+header{
+  display:flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+header>picture#logo-cabecera{
+  flex: 40%;
+}
+
+header>picture#logo-cabecera>img{
+  max-width: 8rem;
+}
+
+header> nav#bloque-iconos{
+  flex: 40%;
+
+}
+header>nav#menu-principal{
+  flex: 100%;
+  background-color: black;
+  color: white;
+}
+
+header> nav#bloque-iconos>ul{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+
+}
+header> nav#bloque-iconos>ul>li{
+  margin:0 .6rem;
+}
+
+header> nav#bloque-iconos>ul>li>a{
+  color:black;
+}
+
+header> nav#bloque-iconos>ul>li>a>i{
+  font-size: 1.5rem;
+
+}
+
+ul{
+  list-style:none;
+  padding: 0;
+}
+header>nav#menu-principal>input{
+  display: none;
+}
+
+header>nav#menu-principal>div#hamburguesa{
+  display:flex;
+  flex-flow: column;
+  align-items: center;
+
+}
+header>nav#menu-principal>div#hamburguesa>label>span{
+  font-size: 2rem;
+}
+
+header>nav#menu-principal>ul#menu{
+  display:none;
+  flex-flow: column;
+  align-items: flex-start;
+  position: absolute;
+  align-self:center;
+  background-color: rgb(0,0,0,.7);
+  margin: 0;
+  padding: .5rem;
+
+}
+header>nav#menu-principal>ul#menu>li>a{
+  color:white;
+  text-decoration: none;
+}
+
+header>nav#menu-principal>ul#menu>li>ul.submenu{
+  display: none;
+}
+
+header>nav#menu-principal>input:checked+ul#menu{
+  display:flex;
+}
+
+
+
+main>section{
+  display: flex;
+  flex-flow: row wrap;
+
+  flex: 100%;
+
+  justify-content: space-around;
+
+}
+main>section>h2{
+  flex: 100%;
+  text-align: center;
+
+}
+
+main>section>form{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  flex: 50%;
+  max-width:70%;
+
+
+
+
+}
+
+main>section>form>input, textarea, select{
+  flex:100%;
+  margin:.3rem;
+  border:1px solid grey;
+  border-radius: 3px;
+  padding:.3rem;
+
+
+
+}
+
+main>section>form>input[type=text]:focus, textarea:focus, select:focus
+{
+  background-color: black;
+  color:lightgrey;
+  border:2px solid lightgrey;
+}
+
+main>section>form>input[type=button]{
+  background-color: black;
+  color:white;
+}
+
+footer>nav#menu-adicional>ul{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: black;
+  font-size: .6rem;
+  padding:1rem;
+
+}
+footer>nav#menu-adicional>ul>li{
+  margin:.2rem;
+}
+
+footer>nav#menu-adicional>ul>li>a{
+  text-decoration: none;
+  color: white;
+}
