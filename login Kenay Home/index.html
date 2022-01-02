@@ -6,20 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN KENAY HOME</title>
+
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
     <main>
-        <p>
+        <div>
             <h2>Iniciar sesión</h2>
-        </p>
-        
-        <form action="index.html" method="post">
-            <p>
-                <label for="email">Email</label> <br>
-                <input type="text" name="emailInicioSesion" id="email">
-            </p>
-        </form>
+
+            <form action="index.html" method="post">
+                <p>
+                    <label for="email" class="cabecerasInput">Email</label> <br>
+                    <input type="text" name="emailInicioSesion" id="email" class="cajaSinBrodes" autofocus>
+                </p>
+                <p id="segundoP">
+                    <label for="pass" class="cabecerasInput">Contraseña</label> <br>
+                    <input type="password" name="passInicioSesion" id="pass" class="cajaSinBrodes">
+                </p>
+
+                <button type="submit" name="recPass" id="recPass">Recuperar contraseña</button> <br>
+                <button type="submit" name="login" id="botonLogin">Iniciar Sesión</button>
+            </form>
+        </div>
+
     </main>
 </body>
 

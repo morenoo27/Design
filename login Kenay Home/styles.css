@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: gray;
+}
+
+/*DISEÑO CAJA*/
+div {
+    background-color: white;
+}
+
+div>* {
+    padding: 2%;
+}
+
+/* POSICIONAMIENTO DE ELEMENTOS */
+.cabecerasInput {
+    margin-left: 3%;
+}
+
+
+/* ESTILO DEL INPUT */
+.cajaSinBrodes {
+    width: 100%;
+    border-style: none;
+    border-bottom: 1px solid lightgrey;
+
+    /*porpiedad que hace que cuando se selecccione el campo, muestra el borde de formas distintas, con none se quita esa animacion*/
+    outline: none;
+}
+
+.cajaSinBrodes:focus{
+    padding: 15px;
+}
+
+/*ESTILOS BOTON RECUPERAR*/
+#recPass {
+    margin-left: 3%;
+    border-style: none;
+    background-color: white;
+    font-weight: bold;
+
+}
+
+#recPass:hover {
+    cursor: pointer;
+}
+
+/*ESTILOS BOTON INICIAR SESION*/
+#botonLogin {
+    margin-top: 12px;
+    background-color: black;
+    padding: 20px 45px;
+    color: burlywood;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+#botonLogin:hover {
+    background-color: gray;
+    cursor: pointer;
+}
