@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ELIMINAMOS ESTILOS PREDETERMINADOS */
+
+nav>ul {
+    background-color: lightgray;
+    padding: 0.5em;
+    border-radius: 20px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+nav>ul>li {
+    list-style: none;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+    display: inline-block;
+    border-right: 2px solid black;
+}
+
+/*tambien estilos del enlace*/
+nav>ul>li>a {
+    border-bottom: 2px groove grey;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 0.2rem;
+}
+
+/*ESTILOS NAV*/
+nav {
+    background-color: #DDDDDD;
+}
+
+/*Penultimo y ultimo hijos tienen estilos diferentes*/
+nav>ul>li:nth-child(3) {
+
+    border-right: 0px;
+}
+
+nav>ul>li:last-child {
+
+    border-right: 0px;
+    float: right;
+}
