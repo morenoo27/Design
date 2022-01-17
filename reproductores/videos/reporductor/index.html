@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="estilos/estilos.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <script type='text/javascript' src='js/script.js'></script>
+
+  <title>Reproductor Video</title>
+</head>
+
+<body>
+
+  <main id="contenedor">
+
+    <video id="reproductor" poster="videos/trailer.png">
+      <source src="videos/videos/trailer.mp4" type="video/mp4" />
+      <source src="videos/videos/trailer.ogv" type='video/ogg; codecs="theora,vorbis"' />
+      <source src="videos/videos/trailer.webm" type='video/webm; codecs="vp8,vorbis"' />
+      <object>
+        <embed src="videos/videos/trailer.swf" type="application/x-shockwave-flash" allowfullscreen="false"
+          alloscriptaccess="always" />
+      </object>
+    </video>
+
+    <div id="info">
+
+      <div id="tiempo">
+
+        <label id="trans">00:00</label>
+        /
+        <label id="total"></label>
+      </div>
+
+      <input type="range" id='barraTiempo' min="0" step="any">
+
+      <button id="screen"><img src="images/full-size.svg" width="30px" /></button>
+    </div>
+
+    <div id="controles">
+
+      <button id="play" value="0"><img src="images/play.svg" width="30px" /></button>
+
+      <button id="stop"><img src="images/stop.svg" width="30px" /></button>
+
+      <button id="restart"><img src="images/restart.svg" width="30px" /></button>
+
+      <button id='bajarVol' class="volumen"> - </button>
+
+      <img id="altavoz" width="30px" height="30px" src="images/altavoz.svg" />
+
+      <button id='subirVol' class="volumen"> + </button>
+
+      <button id="mute"><img src="images/mute.svg" width="30px" /></button>
+
+      <button id="disminuirVel"><img src="images/backward.svg" width="30px" /></button>
+      <label id="velocidad">1.0</label>
+
+      <button id="aumentarVel"><img src="images/forward.svg" width="30px" /></button>
+
+      <button id="saltoAtras"><img src="images/back.svg" width="30px" /></button>
+
+      <button id="saltoAdelante"><img src="images/next.svg" width="30px" /></button>
+
+    </div>
+  </main>
+</body>
+
+</html>
