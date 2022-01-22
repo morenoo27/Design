@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Reproductor de audio</title>
+    <link rel="stylesheet" href="estilos/estilos.css"/>
+    <script type='text/javascript' src='js/main.js'></script>
+  </head>
+
+  <body>
+
+    <div id="contenido">
+
+      <audio id='reproductor' autoplay>
+
+        <source src='audio/secreto.mp3' type='audio/mpeg' />
+
+        <source src='audio/secreto.ogg' type='audio/ogg' />
+
+      </audio>
+
+      <div id="info">
+
+        <label id="trans">00:00</label>
+        /
+        <label id="total"></label>
+
+      </div>
+
+      <div id="botonera">
+
+        <button id='play'>PLAY</button>
+
+        <button id='stop'>STOP</button>
+
+        <button id='restart'>RESTART</button>
+
+        <button id='loop'>LOOP</button>
+
+        <button id='bajarVol'> - </button>
+
+        <img id="altavoz" src='images/altavoz.svg' width="20px" height="20px"/>
+
+        <button id='subirVol'> + </button>
+
+
+      </div>
+
+
+
+    </div>
+
+  </body>
+
+</html>
