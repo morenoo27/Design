@@ -12,12 +12,12 @@ $(document).ready(function () {
             //el texto (padre y hermano => tio) se oculta
             $(this).parent().siblings().fadeOut();
             //el menos se convierte en mas rotando el vector vertical a su pos inicial
-            $(this).children().last("svg").children().css("transform", "rotate(0deg)")
+            $(this).children().last("svg").css("transform", "rotate(90deg)")
         } else {
             //el texto (padre y hermano => tio) se muestra
             $(this).parent().siblings().fadeIn();
             //el mas se convierte en menos rotando el vector vertical a horizontal
-            $(this).children().last("svg").children().css("transform", "rotate(90deg)")
+            $(this).children().last("svg").css("transform", "rotate(0deg)")
         }
     });
 });
