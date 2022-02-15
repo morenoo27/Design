@@ -26,11 +26,16 @@ $(document).ready(function () {
         //quitamos todas las animaciones
         submenu.stop(true)
 
-        //al ul de dentro hacemos que se despliegue o se recoja
-        submenu.slideToggle()
+        if (submenu.css("display") == "none") {
 
-        //a los submenus de los hermanos, los recogemos
-        $(this).siblings().children("ul").slideUp()
+            submenu.slideDown();
+            $(this).siblings().children("ul").slideUp();
+            $(this).find("i").attr("class", "fa fa-angle-up");
+        } else {
+
+            submenu.slideUp();
+            $(this).find("i").attr("class", "fa fa-angle-down");
+        }
     })
 
 
@@ -44,6 +49,10 @@ $(document).ready(function () {
         if ($(this).scrollTop() > 200) {
 
             botonUp.fadeIn()
+
+            $("nav#menu-principal > ul#menu").slideUp()
+            $("ul#menu > li").children("ul").slideUp()
+
         } else {
 
             botonUp.fadeOut()
