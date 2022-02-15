@@ -26,14 +26,23 @@ $(document).ready(function () {
         //quitamos todas las animaciones
         submenu.stop(true)
 
+        //control de visibilidad
         if (submenu.css("display") == "none") {
 
+            //el submenu lo desplegamos
             submenu.slideDown();
+
+            //a los demas que esten desplegados los plegamos
             $(this).siblings().children("ul").slideUp();
+
+            //cambio de clase
             $(this).find("i").attr("class", "fa fa-angle-up");
         } else {
 
+            //pliegue
             submenu.slideUp();
+
+            //cambio de clase
             $(this).find("i").attr("class", "fa fa-angle-down");
         }
     })
@@ -48,32 +57,39 @@ $(document).ready(function () {
         //CONTROL PARA QUE SALGA EL BOTON O NO
         if ($(this).scrollTop() > 200) {
 
+            //aparece
             botonUp.fadeIn()
 
+            //menus se pliegan
             $("nav#menu-principal > ul#menu").slideUp()
             $("ul#menu > li").children("ul").slideUp()
 
         } else {
 
+            //desaparece
             botonUp.fadeOut()
         }
 
         //POSICIONAMIENTO DEL HEADER
         if ($(this).scrollTop() > 0) {
 
+            //posicionamiento
             $("header#top").css({
                 "position": "fixed",
                 "width": "100%"
             })
 
+            //ocultamos el panel de promos
             $("p#promo").slideUp()
         } else {
 
+            //posicionamiento
             $("header#top").css({
                 "position": "relative",
                 "width": "100%"
             })
 
+            //mostramos el panel
             $("p#promo").slideDown()
         }
     });
@@ -81,29 +97,33 @@ $(document).ready(function () {
     botonUp.click(function (e) {
         e.preventDefault()
 
+        //scroleamos hacia el inicio de la pagina
         $("html, body").animate({ scrollTop: 0 })
     })
-
-    $("article>a>picture").mouseenter(function () {
-
-        console.log();
-    });
 
     $("article>a>picture").hover(function () {
 
         // over
+
+        //obtenemos el src
         let foto = $(this).children().attr("src")
 
+        //lo dividimos por el .
         let composicion = foto.split(".")
 
+        //al nombre le ponemos "-1"
         composicion[0] += "-1"
 
+        //volvemos a construir el nombre del src
         foto = composicion[0] + "." + composicion[1]
 
+        //adjudicamos el src
         $(this).children().attr("src", foto)
 
     }, function () {
         // out
+
+        //REVERSA
         let foto = $(this).children().attr("src")
 
         let composicion = foto.split("-")
