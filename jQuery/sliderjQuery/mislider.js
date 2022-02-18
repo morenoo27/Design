@@ -155,6 +155,19 @@ $(document).ready(function () {
             nextSlider++
         }
 
+        let anteriorSlider = SliderIntervar
+
+        let contador = 0
+
+        slider.items.panels.hover(function () {
+            // over
+
+        }, function () {
+            // out
+
+        }
+        );
+
         return slider
 
     }());//() para que se ejecute automaticamente

@@ -44,10 +44,11 @@ h1 {
 .contenedor-slider {
   width: 640px;
   margin: 40px auto 0;
+  position: absolute;
 }
 
 .slider-wrapper {
-  z-index: 500;
+  z-index: 1;
   position: relative;
   width: 100%;
   height: 360px;
@@ -183,6 +184,55 @@ h1 {
   font-weight: 300;
   margin-top: 80px;
   font-size: 300;
+}
+
+/* ESTILOS DE LOS BOTONES DE "MOVIMIENTO" */
+
+#boton-izquierda {
+  /*posicionamiento boton*/
+  position: absolute;
+  margin-top: 10rem;
+  margin-left: 0.5rem;
+
+  /*para que este por encima de las imagenes*/
+  z-index: 2;
+
+  /*estilo boton*/
+  background-color: grey;
+  opacity: 0.7;
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+
+#boton-derecha {
+  /*posicionamiento boton*/
+  position: absolute;
+  margin-top: 10rem;
+
+  right: 0.5rem;
+
+
+
+  /*para que este por encima de las imagenes*/
+  z-index: 2;
+
+  /*estilo boton*/
+  background-color: grey;
+  opacity: 0.7;
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+/*EVENTO HOVER DE BOTONES*/
+#boton-izquierda:hover {
+  opacity: 1;
+}
+
+#boton-derecha:hover {
+  opacity: 1;
 }
 
 
