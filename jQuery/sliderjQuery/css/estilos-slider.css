@@ -210,10 +210,7 @@ h1 {
   /*posicionamiento boton*/
   position: absolute;
   margin-top: 10rem;
-
   right: 0.5rem;
-
-
 
   /*para que este por encima de las imagenes*/
   z-index: 2;
@@ -234,7 +231,6 @@ h1 {
 #boton-derecha:hover {
   opacity: 1;
 }
-
 
 /*---------------------------------------*
  *              Responsive               *
