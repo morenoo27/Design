@@ -19,23 +19,22 @@ $(document).ready(function () {
             },
 
             /* CONSTRUCTOR */
+            /**
+             * Metodo que instancia la configuracion del slider, con constructor por defecto|parametrizado
+             * que declara la duracion del tiempo de intervalo para el cambio de panel
+             * @param {{duration: Number}} settings objeto con la duracion del intervalo
+             */
             init: function (settings) {
 
                 //creamos los controles de forma dinamica
                 creacionControles();
 
                 //adjudicamos la propiedad settings y le ponemos, o valor por defecto(8000) o valor parametrizado(settings)
-                this.settings = settings || { duration: 8000 }
+                slider.settings = settings || { duration: 8000 }
 
                 SliderInit();
 
-                $("#control-buttons li").click(function () {
-
-                    //control para que no se mueva a la foto actual
-                    if (currentSlider !== $(this).index()) {
-                        cambiarPanel($(this).index())
-                    }
-                })
+                funcionalidadLI();
             },
 
             startSlider: function () {
@@ -49,11 +48,11 @@ $(document).ready(function () {
                 let controles = $("#control-buttons li")
 
                 //si llega al final del slider(o se pasa)
-                if (nextSlider >= lengthSlider) {
+                if (nextSlider >= LENGTHSLIDER) {
 
                     //ponemos que el siguiente slider sera el del inicio y que estamos en el ultimo slider
                     nextSlider = 0
-                    currentSlider = lengthSlider - 1
+                    currentSlider = LENGTHSLIDER - 1
                 }
 
                 /*EFECTOS DE MOVIMIENTO*/
@@ -83,7 +82,24 @@ $(document).ready(function () {
         }
 
         //DECLARAMOS VARIABLES GLOBALES
-        var SliderIntervar, currentSlider = 0, nextSlider = 1, lengthSlider = slider.items.panels.length
+        let SliderIntervar, currentSlider = 0, nextSlider = 1
+
+        const LENGTHSLIDER = slider.items.panels.length
+
+        /**
+         * Metodo que implementa la funcionalidad a los botones de control.
+         * En este caso solo el evento "click"
+         */
+        const funcionalidadLI = () => {
+
+            $("#control-buttons li").click(function () {
+
+                //control para que no se mueva a la foto actual
+                if (currentSlider !== $(this).index()) {
+                    cambiarPanel($(this).index())
+                }
+            })
+        }
 
         /**
          * Funcion para la creacion de los controles para la posicion del slider
@@ -95,7 +111,7 @@ $(document).ready(function () {
             let controles = ""
 
             //bucle iterativo para generar dinamicamente los li controles
-            for (let i = 0; i < lengthSlider; i++) {
+            for (let i = 0; i < LENGTHSLIDER; i++) {
 
                 //el primero siempre activo
                 if (i == 0) {
@@ -130,10 +146,10 @@ $(document).ready(function () {
             //boton de controles para el slider
             let controles = $("#control-buttons li")
 
-            if (indice >= lengthSlider) {
+            if (indice >= LENGTHSLIDER) {
                 indice = 0
             } else if (indice < 0) {
-                indice = lengthSlider - 1
+                indice = LENGTHSLIDER - 1
             }
 
             /*EFECTOS DE MOVIMIENTO*/
@@ -192,7 +208,8 @@ $(document).ready(function () {
 
         return slider
 
-    }());//() para que se ejecute automaticamente
+    }()//() para que se ejecute automaticamente
+    );
 
     //llamamos al constructor
     SliderModule.init()
