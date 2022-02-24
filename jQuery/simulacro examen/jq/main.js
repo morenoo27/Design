@@ -80,6 +80,8 @@ $(document).ready(function () {
             if ($(this).val() == '') {
 
                 $(this).next().css("visibility", "visible");
+
+                console.log($(this).prev());
             } else {
 
                 $(this).next().css("visibility", "hidden");
