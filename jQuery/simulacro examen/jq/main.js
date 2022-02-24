@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+    console.log($("#hamburger").children("span.line-ham"));
+    console.log($("#hamburger").children("span.line-ham").eq(9));
+
     //2.A
     $("#chat").fadeIn()
     $("#barra-social").fadeIn()
@@ -54,6 +57,7 @@ $(document).ready(function () {
         $("#menu-toggle").children("span").removeAttr("style");
     });
 
+    //2.C
     $("#header-chat1").click(function (e) {
         e.preventDefault();
 
@@ -62,10 +66,40 @@ $(document).ready(function () {
         $(this).siblings().slideToggle()
     });
 
+    //2.D
     $("#header-chat2>span").click(function (e) {
         e.preventDefault();
 
         $("#header-chat1").siblings().slideToggle()
         $("#header-chat1").fadeIn()
     });
+
+    //4.B
+    $("input").focusout(function (e) {
+        e.preventDefault();
+
+        if ($(this).prop("required")) {
+
+            if ($(this).val() == '') {
+
+                $(this).next().css("visibility", "visible");
+            } else {
+
+                $(this).next().css("visibility", "hidden");
+            }
+        }
+    });
+
+    //4.C
+    $("textarea").keypress(function (e) {
+
+        $("#info-caracteres").html(`Dispone de ${100 - $(this).val().length} caracteres`);
+    }).keyup(function (e) {
+
+        $("#info-caracteres").html(`Dispone de ${100 - $(this).val().length} caracteres`);//para cuando borra
+    });
+
+
+    //5.A
+
 });
