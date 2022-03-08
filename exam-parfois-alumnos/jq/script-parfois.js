@@ -30,6 +30,8 @@ $(document).ready(function () {
             $("#contenido").animate({
                 left: "20rem"
             }, "fast");//3
+
+            $("html").css("overflow-x", "hidden");
         } else {
 
             restablecerEstado()
@@ -78,7 +80,6 @@ $(document).ready(function () {
 
             $("#home-header").css({
                 position: "fixed",
-                opacity: 0.7,
                 width: "100%"
             });
         } else {
@@ -86,8 +87,7 @@ $(document).ready(function () {
             $("#promo").slideDown();//B
 
             $("#home-header").css({
-                position: "relative",
-                opacity: 1
+                position: "relative"
             });
         }
     });
@@ -118,7 +118,7 @@ $(document).ready(function () {
 
         $("#shopping").stop(true, false);
 
-        $("#shopping").slideDown("slow").delay(400).slideUp("slow");
+        $("#shopping").slideDown("slow").delay(1000).slideUp("slow");
 
         $("#iconos").children().children().eq(2).html(`(${contador})`);//B
 
@@ -216,6 +216,8 @@ function restablecerEstado() {
     $("#contenido").animate({
         left: "0rem"
     }, "fast");//3
+
+    $("html").css("overflow-x", "visible");
 
     //SE RESTAURA TODOS LOS SUBMENUS
     $("#menu-toggle").children("li").children("ul").slideUp();//6
